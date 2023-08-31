@@ -16,6 +16,7 @@ def check_format_file(file,fileFormat):
     """
         Verificara el formato de un archivo. Devuelve True si el file coincide con el fileFormat
     """
+    # TODO: usar extract_format_file
     fileExtencion = splitext(file)[1].partition(".")[2]
     if (isinstance(fileFormat,list)):
         return check_format_file_list_(fileExtencion,fileFormat)

@@ -9,6 +9,7 @@ def take_first_file_folder(pathFolder):
     pathFolder_ = normpath(pathFolder)
     filesInFolder = listdir(pathFolder_)
     orderedFilesInFolder = natsorted(filesInFolder)
+    # FIXME: creo que en el caso de orderedFilesInFolderWithPath no es necesario que sea una lista, es mejor que sea una string
     orderedFilesInFolderWithPath = []
     for file in orderedFilesInFolder:
         orderedFilesInFolderWithPath = join(pathFolder_,file)

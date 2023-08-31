@@ -1,1 +1,1 @@
-"Agarra el primera elemento a eleccion, puede ser tanto una string como una lista de posibles tipos de elemento."
+"Agarra el primera elemento a eleccion, puede ser tanto un archivo o una carpeta."
