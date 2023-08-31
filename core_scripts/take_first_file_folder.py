@@ -1,5 +1,6 @@
 from os import listdir
 from os.path import normpath,isdir,join
+from natsort import natsorted
 
 def take_first_file_folder(pathFolder):
     """
@@ -7,15 +8,12 @@ def take_first_file_folder(pathFolder):
     """
     pathFolder_ = normpath(pathFolder)
     filesInFolder = listdir(pathFolder_)
-    orderedFilesInFolder = ""
+    orderedFilesInFolder = natsorted(filesInFolder)
+    orderedFilesInFolderWithPath = []
     for file in orderedFilesInFolder:
-        fileInFolder = join(pathFolder_,file)
-        if isdir(fileInFolder):
+        orderedFilesInFolderWithPath = join(pathFolder_,file)
+        if isdir(orderedFilesInFolderWithPath):
             continue
-        firstFileInFolder = fileInFolder
+        firstFileInFolder = orderedFilesInFolderWithPath
         break
     return firstFileInFolder
-
-l = take_first_file_folder('C:/Users/worf_/Desktop/test/01')
-
-print(l)

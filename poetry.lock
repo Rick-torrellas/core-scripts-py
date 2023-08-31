@@ -11,7 +11,22 @@ files = [
     {file = "core_commands-0.1.4.tar.gz", hash = "sha256:410bc61cc8e5f594cf1d17c255ebc8fc0e0659da81f7a85c994a7aefde5e4ff3"},
 ]
 
+[[package]]
+name = "natsort"
+version = "8.4.0"
+description = "Simple yet flexible natural sorting in Python."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "natsort-8.4.0-py3-none-any.whl", hash = "sha256:4732914fb471f56b5cce04d7bae6f164a592c7712e1c85f9ef585e197299521c"},
+    {file = "natsort-8.4.0.tar.gz", hash = "sha256:45312c4a0e5507593da193dedd04abb1469253b601ecaf63445ad80f0a1ea581"},
+]
+
+[package.extras]
+fast = ["fastnumbers (>=2.0.0)"]
+icu = ["PyICU (>=1.0.0)"]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "e5243561a5941db9a0e38084d15f82b3bd23ce2a1308afe02eb6427ee6268fda"
+content-hash = "69a13ead79a3da93718ec08f3ec81744513f071c42bf12a1ef5a60b7e5df1901"
