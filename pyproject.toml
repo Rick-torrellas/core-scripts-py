@@ -13,6 +13,7 @@ packages = [
 python = "^3.11"
 core-commands = "^0.1.4"
 natsort = "^8.4.0"
+jellyfish = "^1.0.1"
 
 
 [build-system]
