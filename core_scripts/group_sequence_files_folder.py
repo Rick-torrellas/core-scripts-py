@@ -1,27 +1,25 @@
 #cSpell:disable
 from os import listdir,mkdir
-from os.path import isfile,join,normpath
+from os.path import isfile,join,normpath,splitext
 from extract_format_file import extract_format_file
-from group_similar_strings import group_similar_strings
+from group_sequence_strings import group_sequence_strings
 from shutil import move
 
-# string isnumeric()
-
-def group_similar_files_folder(
+def group_sequence_files_folder(
         files_path,
-        files_format,
-        sequence_startup,
-        differences_number
+        files_format, # TODO: crear un proceso para lidiar con arrays TODO: revisar si tiene punto, si tiene eliminarlo.
+        sequence_startup
         ):
     """
         Group file sequences and put them in a numeric sequency of folders.
     """
-        #TODO: refactorizar los argumentos
-    # * optener los archivos del path
-    #   * Solo los archivos y solo los que tengan el files_format
     files = listdir(files_path)
     files_with_path = []
     only_desired_files = []
+    only_desired_files_no_format = []
+    grouped_files = []
+    # * optener los archivos del path
+    #   * Solo los archivos y solo los que tengan el files_format
     for file in files:
         # TODO: Esta podria ser una funcion aparte, join_files_path
         files_with_path.append(join(files_path,file))
@@ -32,7 +30,16 @@ def group_similar_files_folder(
             # TODO: crear una operacion en caso de que files_format sea un array.
             only_desired_files.append(file)
     # * agruparlos
-    grouped_files = group_similar_strings(only_desired_files,differences_number)
+    for file in only_desired_files:
+        file_no_format= splitext(file)[0]
+        only_desired_files_no_format.append(file_no_format)
+    grouped_files_no_format = group_sequence_strings(only_desired_files_no_format)
+    for group in grouped_files_no_format:
+        group_index = grouped_files_no_format.index(group)
+        grouped_files.append([])
+        for file in group:
+            file = f"{file}.{files_format}"
+            grouped_files[group_index].append(file)
     # * crear la carpeta y colocar los archivos en ella.
     sequence_startup__ = str(sequence_startup)
     sequence_continue = sequence_startup
@@ -50,3 +57,5 @@ def group_similar_files_folder(
         mkdir(dir_path)
         for files in group_files:
             move(files,dir_path)
+
+group_sequence_files_folder("E:\\static\\porn\\AshMcKn p2\\Ashleigh McKenzie p2","jpg",13)

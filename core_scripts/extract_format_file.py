@@ -1,5 +1,6 @@
 from os.path import splitext
 
+#TODO: crear una funcion opuesta. remove_format_file
 def extract_format_file(filePath,options = {
     "noDot": False
 }):
