@@ -6,7 +6,7 @@
 from subprocess import run
 from sys import argv
 from os import path
-from termcolor import colored
+# from termcolor import colored
 
 def clean_scream():
     run('cls',shell=True)

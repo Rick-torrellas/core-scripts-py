@@ -5,6 +5,8 @@ from extract_format_file import extract_format_file
 from group_similar_strings import group_similar_strings
 from shutil import move
 
+# string isnumeric()
+
 def group_similar_files_folder(
         files_path,
         files_format,
@@ -12,7 +14,7 @@ def group_similar_files_folder(
         differences_number
         ):
     """
-        Group similar files and put them in a numeric sequency of folders.
+        Group file sequences and put them in a numeric sequency of folders.
     """
         #TODO: refactorizar los argumentos
     # * optener los archivos del path
@@ -48,6 +50,3 @@ def group_similar_files_folder(
         mkdir(dir_path)
         for files in group_files:
             move(files,dir_path)
-    
-
-group_similar_files_folder("E:\\static\\porn\\AshMcKn p2\\Ashleigh McKenzie p2","jpg",13,4)
