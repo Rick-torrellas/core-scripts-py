@@ -2,7 +2,7 @@
 
 [[package]]
 name = "core-commands"
-version = "0.1.4"
+version = "0.1.7"
 description = ""
 optional = false
 python-versions = ">=3.11,<4.0"

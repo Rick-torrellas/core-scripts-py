@@ -27,5 +27,3 @@ def take_first_file_name_same(pathFolder,fileType = "image"):
         filePath = take_first_image_folder(curatedPathFolder)
         return take_copy_rename_(filePath)
     return False
-
-take_first_file_name_same('C:/Users/worf_/Desktop/test/01')

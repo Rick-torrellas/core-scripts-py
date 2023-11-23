@@ -57,5 +57,3 @@ def group_sequence_files_folder(
         mkdir(dir_path)
         for files in group_files:
             move(files,dir_path)
-
-group_sequence_files_folder("E:\\static\\porn\\AshMcKn p2\\Ashleigh McKenzie p2","jpg",13)

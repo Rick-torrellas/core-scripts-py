@@ -1,13 +1,14 @@
 from os.path import splitext
 
-def check_format_file_list_(fileExtencion,fileFormat):
+
+def check_format_list_(fileExtencion,fileFormat):
     for extencion in fileFormat:
         if(extencion == fileExtencion):
             return True
     return False
     
 
-def check_format_file_string_(fileExtencion,fileFormat):
+def check_format_string_(fileExtencion,fileFormat):
     if (fileFormat == fileExtencion):
         return True
     return False
@@ -19,5 +20,5 @@ def check_format_file(file,fileFormat):
     # TODO: usar extract_format_file
     fileExtencion = splitext(file)[1].partition(".")[2]
     if (isinstance(fileFormat,list)):
-        return check_format_file_list_(fileExtencion,fileFormat)
-    return check_format_file_string_(fileExtencion,fileFormat)
+        return check_format_list_(fileExtencion,fileFormat)
+    return check_format_string_(fileExtencion,fileFormat)

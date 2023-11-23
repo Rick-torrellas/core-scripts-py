@@ -1,4 +1,4 @@
-def set_repo(repo,opts):
+def init_repo(repo,opts):
     """
         crea el repositorio en github, y inicia el reopsitio con git, hace un commit y lo publica a github.
     """
