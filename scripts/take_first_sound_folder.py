@@ -1,1 +1,0 @@
-"agarra el primer archivo de audio dentro de una carpeta"

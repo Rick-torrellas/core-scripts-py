@@ -1,4 +1,4 @@
-def exec_script_mode(name):
+def name_main(name):
     """
     Verifica si el script fue ejecutado localmente o fue importado.
     """

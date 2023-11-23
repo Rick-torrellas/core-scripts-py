@@ -1,6 +1,7 @@
 import subprocess
 from pathlib import PurePath
 
+# TODO: la mejor manera de crear esta funcion, es que no dependa del input de la consola.
 location = input("Donde quieres crear ")
 file_name = input("Como se llamara el archivo? ")
 content = input(""" El contenido del archivo  """)
